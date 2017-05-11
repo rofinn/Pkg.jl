@@ -2,8 +2,8 @@
 
 module Write
 
-import ...LibGit2, ..Cache, ..Read, ...Pkg.PkgError
-importall ...LibGit2
+import Base.LibGit2, ..Cache, ..Read, ...Pkg.PkgError
+importall Base.LibGit2
 
 function prefetch(pkg::AbstractString, sha1::AbstractString)
     isempty(Cache.prefetch(pkg, Read.url(pkg), sha1)) && return
